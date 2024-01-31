@@ -53,7 +53,6 @@ class AddTaskScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Get.back();
                   if (controller.textEditingController!.text.isNotEmpty) {
                     controller.addTask();
                   } else {
@@ -63,6 +62,7 @@ class AddTaskScreen extends StatelessWidget {
                       snackPosition: SnackPosition.TOP,
                     );
                   }
+                  Get.back();
                 },
                 child: Container(
                   alignment: Alignment.center,
